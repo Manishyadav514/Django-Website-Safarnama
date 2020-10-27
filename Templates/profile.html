@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+    
+	<body>
+		{% if user.is_authenticated %}
+		<li>Name of the User: {{user.first_name}} {{user.last_name}}</li>
+		<li>Email id: {{user.email}}</li>
+		<li>Username: {{user.username}}</li>
+	
+		{% else%}
+		<!-- User authenticated -->
+		<li><a href="account/register"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Hello, Sign up</a></li>
+		<li><a href="account/login"> <i class="fa fa-unlock-alt" aria-hidden="true"></i>Hello, Sign in</a></li>
+		<li><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact Us: www.ashoka.edu.in</a></li>
+		{% endif %}
+	</body>
+	
+</body>
+</html>

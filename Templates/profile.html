@@ -8,7 +8,7 @@
 <body>
 	
     
-	<body>
+	<div>
 		{% if user.is_authenticated %}
 		<li>Name of the User: {{user.first_name}} {{user.last_name}}</li>
 		<li>Email id: {{user.email}}</li>
@@ -20,7 +20,7 @@
 		<li><a href="account/login"> <i class="fa fa-unlock-alt" aria-hidden="true"></i>Hello, Sign in</a></li>
 		<li><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact Us: www.ashoka.edu.in</a></li>
 		{% endif %}
-	</body>
+	</div>
 	
 </body>
 </html>

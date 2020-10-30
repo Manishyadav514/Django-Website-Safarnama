@@ -48,3 +48,7 @@ def register(request):
 def logout(request):
     auth.logout(request)
     return redirect('/')
+
+
+def profile(request):
+    return render(request, "profile.html")

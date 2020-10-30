@@ -3,38 +3,53 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Safarnama</title>
 </head>
 <body>
-<div>
-	<p>Hello Friends</p>
-</div>
 
 
-<!-- header -->
-<div class="header" id="home">
-	<div class="container">
-		<ul>
-			<nav class="main_nav">
-				<ul class="d-flex flex-row align-items-start justify-content-start">
-					<!-- User authenticated -->
-					{% if user.is_authenticated %}
-					<li> <i class="fa fa-unlock" aria-hidden="true">Hello, {{user.first_name}}{{user.last_name}}</i></li>
-					<li><a href="account/logout"><i class="fa fa-sign-out" aria-hidden="true">Sign out</a></i></li>
-					<li><i class="fa fa-user" aria-hidden="true"></i><a href="account/profile">Profile</li></a>
-					{% else%}
-					<!-- User authenticated -->
-					<li><a href="account/register"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Hello, Sign up</a></li>
-					<li><a href="account/login"> <i class="fa fa-unlock-alt" aria-hidden="true"></i>Hello, Sign in</a></li>
-					<li><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact Us: www.ashoka.edu.in</a></li>
-					<li><i class="fa fa-user" aria-hidden="true"></i><a href="account/login">Profile</li></a>
-					{% endif %}
-				</ul>
-			</nav>
-		</ul>
+
+	
+	<!-- login/registration header-->
+	<div class="header" id="home">
+		<div class="container">
+			<ul>
+				<nav class="main_nav">
+					<ul class="d-flex flex-row align-items-start justify-content-start">
+						<!-- User authentication -->
+						{% if user.is_authenticated %}
+						<li> <i class="fa fa-unlock" aria-hidden="true">Hello, {{user.first_name}}{{user.last_name}}</i></li>
+						<li><a href="account/logout"><i class="fa fa-sign-out" aria-hidden="true">Sign out</a></i></li>
+						<li><i class="fa fa-user" aria-hidden="true"></i><a href="account/profile">Profile</li></a>
+						{% else%}
+						<!-- User authenticated -->
+						<li><a href="account/register"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Hello, Sign up</a></li>
+						<li><a href="account/login"> <i class="fa fa-unlock-alt" aria-hidden="true"></i>Hello, Sign in</a></li>
+						<li><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact Us: www.ashoka.edu.in</a></li>
+						<li><i class="fa fa-user" aria-hidden="true"></i><a href="account/profile">Profile</li></a>
+						{% endif %}
+					</ul>
+				</nav>
+			</ul>
+		</div>
 	</div>
-</div>
-<!-- //header -->
+	<!-- //header -->
+
+
+	<!-- list of cities -->
+	<label for="city">Choose the City</label>
+		<select name="city" style="color: rgb(53, 230, 18);" size="1"  id="hotel_list">
+			<option value="delhi">Delhi</option>
+			<option value="lucknow">Lucknow</option>
+			<option value="sonipat">Sonipat</option>
+			<option value="banglore">Banglore</option>
+		</select>
+		<input type="submit" name="Click to see the result" id="hotel_list">
+	</label>
+
+	<!-- //available hotels -->
+
+
 
 
 </body>

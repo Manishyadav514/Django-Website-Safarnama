@@ -7,18 +7,21 @@
 </head>
 <body>
 	
-    
+
 	<div>
 		{% if user.is_authenticated %}
-		<li>Name of the User: {{user.first_name}} {{user.last_name}}</li>
-		<li>Email id: {{user.email}}</li>
-		<li>Username: {{user.username}}</li>
-	
+		<h3>Edit Your Details:</h3>
+		<form action="register" method="POST">
+			{% csrf_token %}
+			<p>Edit Your First Name<input type="text" name="first_name" placeholder="{{user.first_name}}"></p><br>
+			<p>Edit Your Last Name<input type="text" name="last_name" placeholder=" {{user.last_name}}"></p><br>
+			<p>Edit Your Email<input type="email" name="email" placeholder="{{user.email}}"></p><br>
+			<input type="submit" >
+		</form>
 		{% else%}
-		<!-- User authenticated -->
-		<li><a href="account/register"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Hello, Sign up</a></li>
-		<li><a href="account/login"> <i class="fa fa-unlock-alt" aria-hidden="true"></i>Hello, Sign in</a></li>
-		<li><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact Us: www.ashoka.edu.in</a></li>
+			<li><a href="account/register"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Hello, Sign up</a></li>
+			<li><a href="account/login"> <i class="fa fa-unlock-alt" aria-hidden="true"></i>Hello, Sign in</a></li>
+			<li><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact Us: www.ashoka.edu.in</a></li>
 		{% endif %}
 	</div>
 	

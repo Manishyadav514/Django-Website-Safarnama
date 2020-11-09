@@ -1,0 +1,111 @@
+{% load static %}
+{% static "images" as baseUrls %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--linking bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <!--linking bootstrap-->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Book a Room</title>
+</head>
+
+<body>
+
+
+
+
+    <div class="header">
+        <p>Booking Form</p>
+    </div>
+    <div class="topnav">
+        <a  aria-hidden="true"  href="/" role="button">Home</a>
+        <a class="button" href="account/contact" role="button">Contact Us</a>
+    </div>
+
+    <div class="container">
+        <div class="form_hotels">
+            <form action="#" method="post" class="agile_form">
+                <h1></h1>
+                <div class="agileits-left">
+                    <h4>Enter Your Usename : <input type="text" name="name" class="username" placeholder="username"
+                            required=""></h4>
+                </div>
+                <div class="agileits-right">
+                    <h4>Enter Your Email id : <input type="email" name="name" class="email" placeholder="example@email.com"
+                            required=""></h4>
+                </div>
+                <div class="clear"></div>
+                <div class="agileits-left">
+                    <h4>Enter Your Contact Number : <input type="text" name="name" class="username"
+                            placeholder="phone number" required=""></h4>
+                </div>
+
+                <div class="clear"></div>
+                <div class="checkin agileits-left">
+                    <h4>Check in Date : <input placeholder="Check in" class="date" id="datepicker" type="text" value=""
+                            onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" required="" />
+                    </h4>
+                </div>
+                <div class="checkin agileits-right">
+                    <h4>Check Out Date : <input placeholder="Check out" class="date" id="datepicker1" type="text"
+                            value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}"
+                            required="" /></h4>
+                </div>
+                <div>
+                    <label for="">
+                        <h4>Enter Room Type : </h4>
+                    </label>
+                    <select name="" id="">
+                        <option value="">Delux</option>
+                        <option value="">Superior</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="">
+                        <h4>Number of Adults : </h4>
+                    </label>
+                    <select name="" id="">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">2+</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="">
+                        <h4>Number of Rooms Required :  </h4>
+                    </label>
+                    <select name="" id="">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">2+</option>
+                    </select>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        Are Your an Indian
+                    </label>
+                </div>
+
+                <button type="button" class="btn btn-info" ><a href="/">Submit</a></button>
+        </div>
+        </form>
+    </div>
+    </div>
+
+
+
+
+</body>
+</html>

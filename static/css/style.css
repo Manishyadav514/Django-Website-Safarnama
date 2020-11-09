@@ -1,0 +1,81 @@
+/*-- header --*/
+.header{
+  background: rgb(98, 193, 223);
+  position: relative;
+  text-align: center;
+  text-shadow: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 15px;
+}
+/* The navbar container */
+.topnav{
+overflow: hidden;
+background-color: rgb(46, 42, 42);
+}
+/* Navbar links */
+.topnav a {
+float: left;
+display: block;
+color: cyan;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+/* Links - change color on hover */
+.topnav a:hover{
+background-color: rgb(56, 27, 27);
+color: black;
+}
+
+
+
+
+
+
+
+/* Container holding the image and the text */
+.arrange_center{
+position: relative;
+text-align: center;
+color: black;  
+}
+  
+/* Bottom left text */
+.bottom-left {
+position: absolute;
+bottom: 8px;
+left: 16px;
+}
+  
+/* Top left text */
+.top-left {
+position: absolute;
+top: 8px;
+left: 16px;
+color: turquoise;
+}
+  
+/* Top right text */
+.top-right {
+position: absolute;
+top: 8px;
+right: 16px;
+}
+  
+/* Bottom right text */
+.bottom-right {
+position: absolute;
+bottom: 8px;
+right: 16px;
+}
+
+.form_hotels span {
+width: 22%;
+float: left;
+padding: 12px 10px;
+position: relative;
+color: #fff;
+font-size: 1em;
+letter-spacing: 1px;
+border-right: 1px solid #fff;
+text-align:left;

@@ -138,7 +138,42 @@
 					entirely.
 				</p>
 				<p>
-					<a href="#" class="btn btn-primary my-2">See Available List</a>
+					<!-- //available hotels -->
+					<!-- Button trigger modal(select-location) -->
+					<div class="box">
+						<p>Hey </p>
+					</div>
+					<div class="box" >
+						<div >
+							<select >
+								<optgroup label="Popular Cities">
+									<option>Delhi</option>
+									<option>Honolulu</option>
+									<option>Boise</option>
+									<option>Chicago</option>
+									<option>Indianapolis</option>
+								</optgroup>
+								<optgroup label="Delhi">
+									<option>Birmingham</option>
+								</optgroup>
+								<optgroup label="Mumbai">
+									<option>Anchorage</option>
+								</optgroup>
+								<optgroup label="Noida">
+									<option>Phoenix</option>
+								</optgroup>
+								<optgroup label="Lucknow">
+									<option>Little Rock</option>
+								</optgroup>
+								<optgroup label="Banglore">
+									<option>Los Angeles</option>
+								</optgroup>
+							</select>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<!-- //shop locator (popup) -->
+					<a href="hotel/list" class="btn btn-primary my-2">See Available List</a>
 					<a href="#" class="btn btn-secondary my-2">Best Deals</a>
 				</p>
 			</div>
@@ -155,6 +190,71 @@
 								data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
 								alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;"
 								src="{% static 'images/c1.jpg' %}" data-holder-rendered="true">
+							<div class="card-body">
+								<h5>MANALI</h5>
+								<p>2 Days and 1 night at 5000 ₹</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<div>
+										{% if user.is_authenticated %}
+										<a class="btn btn-info" href="hotel/form" role="button">Book Now!</a>
+										{% else %}
+										<a class="btn btn-info" href="account/login" role="button">Login to Book!</a>
+										{% endif %}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card mb-4 shadow-sm">
+							<img class="card-img-top"
+								data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+								alt="Thumbnail [100%x225]" src="{% static 'images/c2.jpg' %}"
+								data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+							<div class="card-body">
+								<h5>MANALI</h5>
+								<p>2 Days and 1 night at 5000 ₹</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<div>
+										{% if user.is_authenticated %}
+										<a class="btn btn-info" href="hotel/form" role="button">Book Now!</a>
+										{% else %}
+										<a class="btn btn-info" href="account/login" role="button">Login to Book!</a>
+										{% endif %}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="card mb-4 shadow-sm">
+							<img class="card-img-top"
+								data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+								alt="Thumbnail [100%x225]" src="{% static 'images/c2.jpg' %}"
+								data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+							<div class="card-body">
+								<h5>MANALI</h5>
+								<p>2 Days and 1 night at 5000 ₹</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<div>
+										{% if user.is_authenticated %}
+										<a class="btn btn-info" href="hotel/form" role="button">Book Now!</a>
+										{% else %}
+										<a class="btn btn-info" href="account/login" role="button">Login to Book!</a>
+										{% endif %}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="card mb-4 shadow-sm">
+							<img class="card-img-top"
+								data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+								alt="Thumbnail [100%x225]" src="{% static 'images/c2.jpg' %}"
+								data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
 							<div class="card-body">
 								<h5>MANALI</h5>
 								<p>2 Days and 1 night at 5000 ₹</p>
@@ -215,42 +315,8 @@
 					</div>
 					<!-- Hotels-->
 
-					<!-- //available hotels -->
-					<!-- Button trigger modal(select-location) -->
-					<div id="small-dialog1" class="container">
-						<div class="select-city">
-							<h3>
-								<i class="fas fa-map-marker"></i> Please Select Your Hotel</h3>
-							<select class="list_of_cities">
-								<optgroup label="Popular Cities">
-									<option>Delhi</option>
-									<option>Honolulu</option>
-									<option>Boise</option>
-									<option>Chicago</option>
-									<option>Indianapolis</option>
-								</optgroup>
-								<optgroup label="Delhi">
-									<option>Birmingham</option>
-								</optgroup>
-								<optgroup label="Mumbai">
-									<option>Anchorage</option>
-								</optgroup>
-								<optgroup label="Noida">
-									<option>Phoenix</option>
-								</optgroup>
-								<optgroup label="Lucknow">
-									<option>Little Rock</option>
-								</optgroup>
-								<optgroup label="Banglore">
-									<option>Los Angeles</option>
-								</optgroup>
-								<input type="submit" name="Click to see the result" id="hotel_list">
-							</select>
-							<div class="clearfix"></div>
-						</div>
-					</div>
-					<!-- //shop locator (popup) -->
-
+					
+					
 
 
 

@@ -13,26 +13,45 @@
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
   <!--linking bootstrap-->
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <title>Book a Room</title>
 </head>
 
-<body>
+<body >
 
 
 
 
-  <div class="header">
-    <h1>
-      Contact Us
-    </h1>
-  </div>
 
-  <div class="topnav">
-    <a aria-hidden="true" href="/" role="button">Home</a>
-    <a class="button" href="account/contact" role="button">Contact Us</a>
-  </div>
-
+  <!-- navigation bar-->
+	<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="btn btn-dark" href="/" role="button">Home</a>
+				</li>
+			</ul>
+			<form class="form-inline my-2 my-lg-0">
+				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+				<button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+			</form>
+			<div>
+				{% if user.is_authenticated %}
+				<a class="btn btn-success" href="account/profile" role="button">Hey, {{user.first_name}}
+					{{user.last_name}}</a>
+				{% else %}
+				<a class="btn btn-info" href="account/login" role="button">Sign in</a>
+				<a class="btn btn-info" href="account/register" role="button">Sign up</a>
+				<a class="btn btn-success" href="account/login" role="button">Profile</a>
+				{% endif %}
+			</div>
+			</form>
+		</div>
+	</nav>
+	<!-- navigation bar-->
 
   <!-- slide bar-->
   <div class="container-fluid">
@@ -49,10 +68,7 @@
   </div>
   <!-- slide bar-->
 
-  <div class="header">
-  </div>
-
-  
+    
 
   <div class="center bg-image">
     <div role="main" class="form-all" style="margin:0 auto;">
@@ -146,6 +162,7 @@
   </div>
 
 
-</body>
 
+</div>
+</body>
 </html>

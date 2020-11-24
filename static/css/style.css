@@ -1,3 +1,6 @@
+.white-font{
+  color: white;
+}
 body{
     background-color: rgb(151, 146, 146);
 }
@@ -10,19 +13,16 @@ body{
   }
 /* Title_Text*/
 .title-center-bold{
-    text-decoration: overline underline;  text-decoration-color: rgb(178, 243, 189);
-    text-decoration-style: wavy;
-    text-shadow: 2px 2px rgb(9, 79, 145);
-    background: black;
+    background: cyan;
     font-style: oblique;
-    text-shadow:cyan;
     font-size: 30px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 15px;
     font-weight: bold;
     text-align: center;    
-    color: white;  
+    color: black;  
   }
+
 
 /* Box having Hotel Details*/
 div.box-text {
@@ -165,3 +165,31 @@ div.box-text {
       top: -1px;
   }
   /* Box having Hotel Details*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

@@ -4,165 +4,196 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--linking bootstrap-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
-  <!--linking bootstrap-->
-  <title>Book a Room</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--linking bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <!--linking bootstrap-->
+    <title>Book a Room</title>
 </head>
 
-<body >
+<body>
 
-
-
-
-
-  <!-- navigation bar-->
-	<nav class="navbar navbar-expand-lg navbar-light bg-dark">
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active">
-					<a class="btn btn-dark" href="/" role="button">Home</a>
-				</li>
-			</ul>
-			<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-				<button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-			</form>
-			<div>
-				{% if user.is_authenticated %}
-				<a class="btn btn-success" href="account/profile" role="button">Hey, {{user.first_name}}
-					{{user.last_name}}</a>
-				{% else %}
-				<a class="btn btn-info" href="account/login" role="button">Sign in</a>
-				<a class="btn btn-info" href="account/register" role="button">Sign up</a>
-				<a class="btn btn-success" href="account/login" role="button">Profile</a>
-				{% endif %}
-			</div>
-			</form>
-		</div>
-	</nav>
-	<!-- navigation bar-->
-
-  <!-- slide bar-->
-  <div class="container-fluid">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100" src="{% static 'images/banner1.jpg' %}" alt="First slide">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Travel Unknown</h5>
-          <p>Know what you want</p>
+    <!-- navigation bar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a href="/"><i class="fa fa-home" aria-hidden="true"
+                            style="font-size: 30px; color: rgb(142, 218, 228);" role="button">Home</i></a>
+                </li>
+            </ul>
         </div>
-      </div>
+    </nav>
+    <div class="title-center-bold"><i class="" aria-hidden="true" style="font-size: 30px;">Contact Us </i></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="center bg-image">
+      <div role="main" class="form-all" style="margin:0 auto;">
+        <ul class="form-section page-section">
+            <li class="form-line jf-required" data-type="control_textbox" id="id_1"><label
+                    class="form-label form-label-top form-label-auto" id="label_1" for="input_1">Name<span
+                        class="form-required">*</span></label>
+                <div id="cid_1" class="form-input-wide jf-required"><input type="text" id="input_1"
+                        name="q1_name" data-type="input-textbox" class="form-textbox validate[required]"
+                        size="40" value="" placeholder=" " data-component="textbox"
+                        aria-labelledby="label_1" required=""></div>
+            </li>
+            <li class="form-line jf-required" data-type="control_textbox" id="id_3"><label
+                    class="form-label form-label-top form-label-auto" id="label_3" for="input_3">E-mail<span
+                        class="form-required">*</span></label>
+                <div id="cid_3" class="form-input-wide jf-required"><input type="text" id="input_3"
+                        name="q3_email" data-type="input-textbox"
+                        class="form-textbox validate[required, Email]" size="40" value="" placeholder=" "
+                        data-component="textbox" aria-labelledby="label_3" required=""></div>
+            </li>
+            <li class="form-line" data-type="control_textbox" id="id_5"><label
+                    class="form-label form-label-top form-label-auto" id="label_5" for="input_5"> Phone
+                    number </label>
+                <div id="cid_5" class="form-input-wide"><input type="text" id="input_5"
+                        name="q5_phoneNumber5" data-type="input-textbox"
+                        class="form-textbox validate[AlphaNumeric]" size="40" value="" placeholder=" "
+                        data-component="textbox" aria-labelledby="label_5"></div>
+            </li>
+            <li class="form-line jf-required" data-type="control_textarea" id="id_4"><label
+                    class="form-label form-label-top form-label-auto" id="label_4"
+                    for="input_4">Message<span class="form-required">*</span></label>
+                <div id="cid_4" class="form-input-wide jf-required"><textarea id="input_4"
+                        class="form-textarea validate[required]" name="q4_message4" cols="40" rows="6"
+                        data-component="textarea" required="" aria-labelledby="label_4"></textarea></div>
+            </li>
+            <li class="form-line" data-type="control_button" id="id_7">
+                <div id="cid_7" class="form-input-wide">
+                    <div style="text-align:center" data-align="center"
+                        class="form-buttons-wrapper form-buttons-center jsTest-button-wrapperField"><button
+                            id="input_7" type="submit"
+                            class="form-submit-button form-submit-button-book_blue2 submit-button jf-form-buttons jsTest-submitField"
+                            data-component="button" data-content="">Mail Now!</button></div>
+                </div>
+            </li>
+            <li style="display:none">Should be Empty:<input type="text" name="website" value=""></li>
+        </ul>
     </div>
-  </div>
-  </div>
-  <!-- slide bar-->
+    </div>
+  
 
     
 
-  <div class="center bg-image">
-    <div role="main" class="form-all" style="margin:0 auto;">
-      <ul class="form-section page-section">
-          <li class="form-line jf-required" data-type="control_textbox" id="id_1"><label
-                  class="form-label form-label-top form-label-auto" id="label_1" for="input_1">Name<span
-                      class="form-required">*</span></label>
-              <div id="cid_1" class="form-input-wide jf-required"><input type="text" id="input_1"
-                      name="q1_name" data-type="input-textbox" class="form-textbox validate[required]"
-                      size="40" value="" placeholder=" " data-component="textbox"
-                      aria-labelledby="label_1" required=""></div>
-          </li>
-          <li class="form-line jf-required" data-type="control_textbox" id="id_3"><label
-                  class="form-label form-label-top form-label-auto" id="label_3" for="input_3">E-mail<span
-                      class="form-required">*</span></label>
-              <div id="cid_3" class="form-input-wide jf-required"><input type="text" id="input_3"
-                      name="q3_email" data-type="input-textbox"
-                      class="form-textbox validate[required, Email]" size="40" value="" placeholder=" "
-                      data-component="textbox" aria-labelledby="label_3" required=""></div>
-          </li>
-          <li class="form-line" data-type="control_textbox" id="id_5"><label
-                  class="form-label form-label-top form-label-auto" id="label_5" for="input_5"> Phone
-                  number </label>
-              <div id="cid_5" class="form-input-wide"><input type="text" id="input_5"
-                      name="q5_phoneNumber5" data-type="input-textbox"
-                      class="form-textbox validate[AlphaNumeric]" size="40" value="" placeholder=" "
-                      data-component="textbox" aria-labelledby="label_5"></div>
-          </li>
-          <li class="form-line jf-required" data-type="control_textarea" id="id_4"><label
-                  class="form-label form-label-top form-label-auto" id="label_4"
-                  for="input_4">Message<span class="form-required">*</span></label>
-              <div id="cid_4" class="form-input-wide jf-required"><textarea id="input_4"
-                      class="form-textarea validate[required]" name="q4_message4" cols="40" rows="6"
-                      data-component="textarea" required="" aria-labelledby="label_4"></textarea></div>
-          </li>
-          <li class="form-line" data-type="control_button" id="id_7">
-              <div id="cid_7" class="form-input-wide">
-                  <div style="text-align:center" data-align="center"
-                      class="form-buttons-wrapper form-buttons-center jsTest-button-wrapperField"><button
-                          id="input_7" type="submit"
-                          class="form-submit-button form-submit-button-book_blue2 submit-button jf-form-buttons jsTest-submitField"
-                          data-component="button" data-content="">Mail Now!</button></div>
-              </div>
-          </li>
-          <li style="display:none">Should be Empty:<input type="text" name="website" value=""></li>
-      </ul>
-  </div>
-  </div>
+
+				<!-- slide bar-->
+				<div class="container-fluid">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img class="d-block w-100" src="{% static 'images/banner6.jpg' %}" alt="First slide">
+							<div class="carousel-caption d-none d-md-block"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- slide bar-->
 
 
+			<!-- Footer -->
+			<footer class="page-footer font-small indigo bg-dark white-font">
+				<!-- Footer Links -->
+				<div class="container text-center text-md-left">
+					<!-- Grid row -->
+					<div class="row">
+						<!-- Grid column -->
+						<div class="col-md-3 mx-auto">
+							<!-- Links -->
+							<h5 class="font-weight-bold text-uppercase mt-3 mb-4">Our Products</h5>
+							<ul class="list-unstyled">
+								<li> 💯 Best Travel Packs</li><li> ✭  Popular Hotels</li><li> ☃ A to Z Tourism</li>
+							</ul>
+						</div>
+						<!-- Grid column -->
+						<hr class="clearfix w-100 d-md-none">
+						<!-- Grid column -->
+						<div class="col-md-3 mx-auto">
+							<!-- Links -->
+							<h5 class="font-weight-bold text-uppercase mt-3 mb-4">Contact Us</h5>
+							<ul class="list-unstyled">
+								<li>
+									<p>✭ dchaurasiya277@.gmail.com</p>
+								</li>
+								<li>
+									<p>✭ manishyadav12@gmail.com</p>
+								</li>
+								<li>
+									<p>✭ shushantrajak2020@gmail.com</p>
+								</li>
+							</ul>
+						</div>
+						<!-- Grid column -->
+						<hr class="clearfix w-100 d-md-none">
+						<!-- Grid column -->
+						<div class="col-md-3 mx-auto">
+							<!-- Links -->
+							<h5 class="font-weight-bold text-uppercase mt-3 mb-4">About Us</h5>
+							<ul class="list-unstyled">
+								<li>
+									<a>Here you will get all kind of hotels and restaurent at a very cheap cost</a>
+								</li>
+							</ul>
+						</div>
+						<!-- Grid column -->
+						<hr class="clearfix w-100 d-md-none">
+						<!-- Grid column -->
+						<div class="col-md-3 mx-auto">
+							<!-- Links -->
+							<h5 class="font-weight-bold text-uppercase mt-3 mb-4">Follow Us</h5>
+							<ul class="list-unstyled">
+								<li>
+									<div>
+										<a href="#" class="fa fa-facebook"></a>
+										<a href="#" class="fa fa-twitter"></a>
+										<a href="#" class="fa fa-instagram"></a>
+										<a href="#" class="fa fa-youtube"></a>
+										<a href="#" class="fa fa-google"></a>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- Grid column -->
+					</div>
+					<!-- Grid row -->
+				</div>
+				<!-- Footer Links -->
+				<!-- Copyright -->
+				<div class="footer-copyright center text-right py-3">© 2020 Safarnama
+					<a> All rights reserved</a>
+				</div>
+				<!-- Copyright -->
+			</footer>
+			<!-- Footer -->
 
-  <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
-    <div class="col-md-6 px-0">
 
-      <div class="title center-bold">
-        <p>Our Members</p>
-      </div>
-
-      <div class="row ">
-        <div class="col-lg-4">
-          <img class="rounded-circle" src="https://source.unsplash.com/collection/190727/1600x900"
-            alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies
-            vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus
-            magna.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="rounded-circle" src="https://source.unsplash.com/collection/190727/1600x900"
-            alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
-            mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-            condimentum nibh.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="rounded-circle" src="https://source.unsplash.com/collection/190727/1600x900"
-            alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta
-            felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
-            massa justo sit amet risus.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-        </div><!-- /.col-lg-4 -->
-      </div>
-
-      <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
-    </div>
-  </div>
-
-
-
-</div>
 </body>
 </html>

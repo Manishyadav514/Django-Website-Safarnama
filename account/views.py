@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
+from django.contrib import messages
 # Create your views here.
 # To change handle the dstination from here
 
@@ -12,7 +13,7 @@ def login(request):
             auth.login(request, user)
             return redirect("/")
         else:
-            messages.info(request, 'invalid credentials')
+            messages.add_message(request, messages.INFO, 'Please enter a valid username and passowrd')
             return redirect('login')
     else:
         return render(request, 'login.html')
@@ -50,8 +51,6 @@ def logout(request):
     return redirect('/')
 
 
-def profile(request):
-    return render(request, "profile.html")
-
 def contact(request):
     return render(request, "contact.html")
+

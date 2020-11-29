@@ -40,18 +40,85 @@
             </ul>
         </div>
     </nav>
-    <div class="title-center-bold"><i class="fa fa-line-chart" aria-hidden="true" style="font-size: 30px;">Our Services</i></div>
+    <div class="title-center-bold"><i class="fa fa-line-chart" aria-hidden="true" style="font-size: 30px;">Our
+            Services</i></div>
 
 
 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="d-flex justify-content-between align-items-center" >
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item active ml-4">
+                    <form method="GET">
+                        <label class="my-1 mr-2 " for="inlineFormCustomSelectPref">Sort by Rating:</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="query" id="inlineRadio1" value="1">
+                            <label class="form-check-label" for="inlineRadio1">1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="query" id="inlineRadio2" value="2">
+                            <label class="form-check-label" for="inlineRadio2">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="query" id="inlineRadio1" value="3">
+                            <label class="form-check-label" for="inlineRadio1">3</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="query" id="inlineRadio2" value="4">
+                            <label class="form-check-label" for="inlineRadio2">4</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="query" id="inlineRadio2" value="5">
+                            <label class="form-check-label" for="inlineRadio2">5</label>
+                        </div>
+                        <button class="btn btn-outline-info  my-2 my-sm-0" type="submit">Submit</button>
+                    </form>
+                </li>
+
+                <li class="nav-item active ml-4">
+                    <form method="GET" class="form-inline">
+                        <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Sort by City:</label>
+                        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                            <option selected>City</option>
+                            <option  name="query" value="Mumbai" >Mumbai</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Agra">Agra</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary my-1">Submit</button>
+                    </form>
+                </li>
+
+                <li class="nav-item active ml-4">
+                    <form class="form-inline">
+                        <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Sort by %off</label>
+                        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                            <option selected>Price</option>
+                            <option value="1">less than 5000₹</option>
+                            <option value="2">5000₹ - 10,000₹</option>
+                            <option value="3">Above 10,000₹</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary my-1">Submit</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+ 
     {% for dest in dests %}
     <div class="relative ">
+
         <div>
             <a href="/img"><img src="{{dest.img1.url}}" alt="" class="absolute"></a>
             <div>
                 <img src="{{dest.img2.url}}" alt="" class="absolute1">
                 <div>
+                    <img src="{{dest.img2.url}}" alt="" class="absolute1">
                     <img src="{{dest.img3.url}}" alt="" class="absolute2">
+                    <img src="{{dest.img3.url}}" alt="" class="absolute3">
                     <div>
                         <img src="{{dest.img3.url}}" alt="" class="absolute3">
                         <div class="absolute4">
@@ -60,10 +127,12 @@
                     </div>
                 </div>
             </div>
+        </div>
 
+        <div>
             <div class="box-text">
                 <div class="text-top">
-                    {{dest.city}}-{{dest.hotel}}
+                    <p></p>{{dest.city}}➣➣{{dest.hotel}}
                 </div>
 
                 <div class="text-bottom">
@@ -71,8 +140,8 @@
                             Property's Safety & Hygiene</i></p>
                     <i class="fa fa-handshake-o" style="font-size:20px;color:grey;" aria-hidden="true">100% Safe
                         Environment</i>
-                    <p><i class="fa fa-wifi" aria-hidden="true" style="font-size:20px;color:grey;"><span
-                                class="free">Free Wifi</span></i></p>
+                    <p><i class="fa fa-wifi" aria-hidden="true" style="font-size:20px;color:grey;"><span class="free">Free
+                                Wifi</span></i></p>
                 </div>
 
                 <div class="text-bottom shift-left ">
@@ -128,7 +197,7 @@
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                     </h6>
-                   {% endif %}    
+                    {% endif %}
                     <div id="body">
 
                         <h6 class="vc">{{dest.off}}% off</h6>
@@ -137,6 +206,7 @@
             </div>
         </div>
     </div>
+    </div>
     {% endfor %}
 
 
@@ -144,94 +214,96 @@
 
 
 
-				<!-- slide bar-->
-				<div class="container-fluid">
-					<div class="carousel-inner">
-						<div class="carousel-item active">
-							<img class="d-block w-100" src="{% static 'images/banner6.jpg' %}" alt="First slide">
-							<div class="carousel-caption d-none d-md-block"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- slide bar-->
+    <!-- slide bar-->
+    <div class="container-fluid">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="{% static 'images/banner6.jpg' %}" alt="First slide">
+                <div class="carousel-caption d-none d-md-block"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <!-- slide bar-->
 
 
-			<!-- Footer -->
-			<footer class="page-footer font-small indigo bg-dark white-font">
-				<!-- Footer Links -->
-				<div class="container text-center text-md-left">
-					<!-- Grid row -->
-					<div class="row">
-						<!-- Grid column -->
-						<div class="col-md-3 mx-auto">
-							<!-- Links -->
-							<h5 class="font-weight-bold text-uppercase mt-3 mb-4">OUR PRODUCTS</h5>
-							<ul class="list-unstyled">
-								<li> 💯 Best Travel Packs</li><li> ✭  Popular Hotels</li><li> ☃ A to Z Tourism</li>
-							</ul>
-						</div>
-						<!-- Grid column -->
-						<hr class="clearfix w-100 d-md-none">
-						<!-- Grid column -->
-						<div class="col-md-3 mx-auto">
-							<!-- Links -->
-							<h5 class="font-weight-bold text-uppercase mt-3 mb-4">Contact Us</h5>
-							<ul class="list-unstyled">
-								<li>
-									<p>✭ dchaurasiya277@.gmail.com</p>
-								</li>
-								<li>
-									<p>✭ manishyadav12@gmail.com</p>
-								</li>
-								<li>
-									<p>✭ shushantrajak2020@gmail.com</p>
-								</li>
-							</ul>
-						</div>
-						<!-- Grid column -->
-						<hr class="clearfix w-100 d-md-none">
-						<!-- Grid column -->
-						<div class="col-md-3 mx-auto">
-							<!-- Links -->
-							<h5 class="font-weight-bold text-uppercase mt-3 mb-4">About Us</h5>
-							<ul class="list-unstyled">
-								<li>
-									<a>Here you will get all kind of hotels and restaurent at a very cheap cost</a>
-								</li>
-							</ul>
-						</div>
-						<!-- Grid column -->
-						<hr class="clearfix w-100 d-md-none">
-						<!-- Grid column -->
-						<div class="col-md-3 mx-auto">
-							<!-- Links -->
-							<h5 class="font-weight-bold text-uppercase mt-3 mb-4">Follow Us</h5>
-							<ul class="list-unstyled">
-								<li>
-									<div>
-										<a href="#" class="fa fa-facebook"></a>
-										<a href="#" class="fa fa-twitter"></a>
-										<a href="#" class="fa fa-instagram"></a>
-										<a href="#" class="fa fa-youtube"></a>
-										<a href="#" class="fa fa-google"></a>
-									</div>
-								</li>
-							</ul>
-						</div>
-						<!-- Grid column -->
-					</div>
-					<!-- Grid row -->
-				</div>
-				<!-- Footer Links -->
-				<!-- Copyright -->
-				<div class="footer-copyright center text-right py-3">© 2020 Safarnama
-					<a> All rights reserved</a>
-				</div>
-				<!-- Copyright -->
-			</footer>
-			<!-- Footer -->
+    <!-- Footer -->
+    <footer class="page-footer font-small indigo bg-dark white-font">
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left">
+            <!-- Grid row -->
+            <div class="row">
+                <!-- Grid column -->
+                <div class="col-md-3 mx-auto">
+                    <!-- Links -->
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">OUR PRODUCTS</h5>
+                    <ul class="list-unstyled">
+                        <li> 💯 Best Travel Packs</li>
+                        <li> ✭ Popular Hotels</li>
+                        <li> ☃ A to Z Tourism</li>
+                    </ul>
+                </div>
+                <!-- Grid column -->
+                <hr class="clearfix w-100 d-md-none">
+                <!-- Grid column -->
+                <div class="col-md-3 mx-auto">
+                    <!-- Links -->
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <p>✭ dchaurasiya277@.gmail.com</p>
+                        </li>
+                        <li>
+                            <p>✭ manishyadav12@gmail.com</p>
+                        </li>
+                        <li>
+                            <p>✭ shushantrajak2020@gmail.com</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Grid column -->
+                <hr class="clearfix w-100 d-md-none">
+                <!-- Grid column -->
+                <div class="col-md-3 mx-auto">
+                    <!-- Links -->
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">About Us</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a>Here you will get all kind of hotels and restaurent at a very cheap cost</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Grid column -->
+                <hr class="clearfix w-100 d-md-none">
+                <!-- Grid column -->
+                <div class="col-md-3 mx-auto">
+                    <!-- Links -->
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Follow Us</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <div>
+                                <a href="#" class="fa fa-facebook"></a>
+                                <a href="#" class="fa fa-twitter"></a>
+                                <a href="#" class="fa fa-instagram"></a>
+                                <a href="#" class="fa fa-youtube"></a>
+                                <a href="#" class="fa fa-google"></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+        <!-- Footer Links -->
+        <!-- Copyright -->
+        <div class="footer-copyright center text-right py-3">© 2020 Safarnama
+            <a> All rights reserved</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
 
 
 </body>
